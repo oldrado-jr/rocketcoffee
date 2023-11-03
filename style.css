@@ -31,6 +31,10 @@ ul {
   list-style: none;
 }
 
+.desktop {
+  display: none;
+}
+
 header {
   padding: 37px 25px;
   display: flex;
@@ -46,6 +50,9 @@ main {
 h1 {
   margin: 88px 28px;
   text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
 button {
@@ -122,4 +129,53 @@ button {
 
 .menu-mobile ul li a:first-child {
   color: var(--text-color-menu-mobile);
+}
+
+@media (min-width: 1000px) {
+  body {
+    background: url(./assets/blur-1.png) no-repeat top left/cover, var(--background) url(./assets/blur-2.png) no-repeat bottom right/cover;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: initial;
+  }
+
+  header {
+    border: none;
+    justify-content: space-evenly;
+    padding: 40px 0 50px;
+  }
+
+  button {
+    margin: 0;
+    padding: 11px 38px;
+  }
+
+  .menu-desktop ul {
+    display: flex;
+    gap: 33px;
+  }
+
+  .menu-desktop ul li {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+  }
+
+  .titles {
+    margin: 0;
+    font-size: 80px;
+    letter-spacing: -2.4px;
+    gap: 0;
+  }
+
+  .rocket-coffee-img {
+    width: initial;
+    display: block;
+    margin: 0 auto;
+  }
 }
