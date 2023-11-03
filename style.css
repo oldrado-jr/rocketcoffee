@@ -35,15 +35,16 @@ ul {
   display: none;
 }
 
-header {
+header,
+.menu-header {
   padding: 37px 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-main {
-  position: relative;
+header {
+  border-bottom: 1px solid var(--border);
 }
 
 h1 {
@@ -106,13 +107,18 @@ button:hover {
 }
 
 .menu-mobile {
-  position: absolute;
+  position: fixed;
   z-index: 1;
-  top: -62px;
+  top: 0;
+  overflow: auto;
 
   width: 100vw;
   height: 100vh;
   background: var(--background);
+}
+
+.menu-header {
+  border-bottom: none;
 }
 
 .menu-mobile ul li {
